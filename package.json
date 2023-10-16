@@ -19,6 +19,9 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "bootstrap": "^3.0.0",
+    "jw-angular-pagination": "^1.2.0",
+    "jw-paginate": "^1.0.4",
+    "ngx-pagination": "^6.0.3",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.0.0",
     "tslib": "^2.3.0",
@@ -37,7 +40,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "postcss": "^8.4.21",
-    "typescript": "~4.7.2",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "typescript": "~4.7.2"
   }
 }

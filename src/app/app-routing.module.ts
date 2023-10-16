@@ -8,6 +8,7 @@ import { DetailDashboardComponent } from './detail-dashboard/detail-dashboard.co
 import { SettingsComponent } from './settings/settings.component';
 import { HomeComponent } from './home/home.component';
 import { ReportsComponent } from './reports/reports.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 const appRoutes: Routes = [
   { path: 'auth', component: AuthComponent },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   {path: 'detail-dashboard', component: DetailDashboardComponent,canActivate: [AuthGuard]},
   {path: 'reports', component: ReportsComponent,canActivate: [AuthGuard]},
   {path: 'settings', component: SettingsComponent,canActivate: [AuthGuard]},
+  {path: 'pg', component: PaginationComponent},
   
       
       

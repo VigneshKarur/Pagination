@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +16,7 @@ import { SummaryDashboardComponent } from './summary-dashboard/summary-dashboard
 import { DetailDashboardComponent } from './detail-dashboard/detail-dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ReportsComponent } from './reports/reports.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 
@@ -30,6 +32,7 @@ import { ReportsComponent } from './reports/reports.component';
     DetailDashboardComponent,
     SettingsComponent,
     ReportsComponent,
+    PaginationComponent,
    
 
   ],
@@ -38,7 +41,8 @@ import { ReportsComponent } from './reports/reports.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [
     
