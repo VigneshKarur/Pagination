@@ -10,10 +10,11 @@ import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
+import { MsalService } from '@azure/msal-angular';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private msalService:MsalService, private router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -27,7 +28,7 @@ export class AuthGuard implements CanActivate {
       take(1),
       map(user => {
         const isAuth = !!user;
-        if (isAuth) {
+        if (isAuth || this.msalService.instance.getAllAccounts().length>0) {
           return true;
         }
         return this.router.createUrlTree(['/auth']);

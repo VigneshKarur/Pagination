@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
+import { MsalService } from '@azure/msal-angular';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ export class HeaderComponent implements OnInit{
 
   constructor(
     
-    private authService: AuthService
+    private authService: AuthService,
+    private msalService: MsalService
   ) {}
 
   ngOnInit() {

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { MsalComponent } from '../msal/msal.component';
 
 import { AuthService, AuthResponseData } from './auth.service';
 
@@ -13,6 +14,7 @@ export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
+  logged:string=''
 
   constructor(private authService: AuthService, private router: Router) {}
 
